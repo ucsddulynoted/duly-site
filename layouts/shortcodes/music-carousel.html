@@ -1,0 +1,9 @@
+<div class="carousel-container">
+  <button class="carousel-button" id="prevBtn">&#9001;</button>
+  <div class="carousel" id="musicCarousel">
+    {{ range .Site.Data.music.music }}
+      {{ partial "carousel/music.html" . }}
+    {{ end }}
+  </div>
+  <button class="carousel-button" id="nextBtn">&#9002;</button>
+</div>
