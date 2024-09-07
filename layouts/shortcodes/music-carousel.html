@@ -1,7 +1,7 @@
 <div class="carousel-container">
   <button class="carousel-button" id="prevBtn">&#9001;</button>
   <div class="carousel" id="musicCarousel">
-    {{ range .Site.Data.music.music }}
+    {{ range .Site.Data.carousels.music }}
       {{ partial "carousel/music.html" . }}
     {{ end }}
   </div>

@@ -1,0 +1,7 @@
+<div class="carousel-container">
+    <div class="carousel">
+      {{- range .Site.Data.carousels.photoshoot -}}
+        {{- partial "carousel/image.html" . -}}
+      {{- end -}}
+    </div>
+</div>
