@@ -1,4 +1,4 @@
-@use "utils/variables";
+@use "utils/colors";
 @use "utils/mixins";
 
 .carousel {
@@ -23,7 +23,7 @@
     background: none;
     margin: 0 10px;
     border: none;
-    color: variables.$primary-color;
+    color: colors.$primary-color;
     font-size: 50px;
     height: 100%;
 

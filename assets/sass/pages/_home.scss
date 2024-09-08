@@ -1,4 +1,4 @@
-@use "utils/variables";
+@use "utils/colors";
 @use "utils/mixins";
 @use "components/carousel";
 @use "components/redirect";
@@ -7,7 +7,7 @@
     display: block;
     font-family: Caveat;
     font-size: 100px;
-    color: variables.$secondary-color;
+    color: colors.$secondary-color;
     margin: 13px 0px;
 }
 
@@ -26,13 +26,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: variables.$music-carousel-background;
-    color: variables.$primary-color;
+    background-color: colors.$music-carousel-background;
+    color: colors.$primary-color;
     text-decoration: none;
 
     &:hover {
-        background-color: variables.$primary-color;
-        color: variables.$background-color;
+        background-color: colors.$primary-color;
+        color: colors.$background-color;
     }
 
     img {

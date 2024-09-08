@@ -1,1 +1,46 @@
+@use "utils/mixins";
+@use "utils/colors";
 @use "components/redirect";
+
+.topnav {
+    position: fixed;
+    top: 0; left: 0;
+    transform: translate(calc(50vw - 50%));
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.25) 25% 75%,
+        rgba(255,255,255,0));
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+
+    a{
+        @include mixins.transition;
+
+        border: 1px solid colors.$primary-color;
+        width: 144px;
+        height: 63px; 
+        padding-top: 30px;
+        border-radius: 30px;
+        padding: 15px;
+        margin-right: 40px;
+        text-decoration: none;
+        color: colors.$primary-color;
+        transition-property: background-color, color, border-color;
+        font-size: medium;
+        text-align: center;
+
+        &:hover {
+            background-color: colors.$secondary-color;
+            border-color: colors.$secondary-color;
+        }
+    }
+}
+
+#page-button {
+    background-color: colors.$secondary-color;
+    border-color: colors.$secondary-color;
+    color: colors.$primary-color;
+}
