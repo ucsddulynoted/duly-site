@@ -1,0 +1,18 @@
+@use "utils/variables";
+@use "utils/mixins";
+@use "components/carousel";
+@use "components/redirect";
+
+.photo-credits {
+    font-size: 12px;
+    text-align: right;
+}
+
+.carousel-img {
+    @include mixins.no-drag;
+
+    scroll-snap-align: start;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 30px;
+}

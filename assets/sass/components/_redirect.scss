@@ -1,0 +1,28 @@
+@use "utils/variables";
+@use "utils/mixins";
+
+.redirect {
+    margin: 50px;
+    text-align: center;
+}
+
+.redirect-button {
+    @include mixins.transition;
+    transition-property: background-color, color, border-color;
+
+    border: 1px solid variables.$primary-color;
+    width: 144px;
+    height: 63px;
+    border-radius: 30px;
+    padding: 15px;
+
+    text-decoration: none;
+    color: variables.$primary-color;
+    background-color: variables.$background-color;
+
+    &:hover {
+        border-color: variables.$secondary-color;
+        background-color: variables.$secondary-color;
+        color: variables.$background-color;
+    }
+}

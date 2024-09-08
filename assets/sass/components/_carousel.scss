@@ -1,0 +1,33 @@
+@use "utils/variables";
+@use "utils/mixins";
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    align-items: center;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-button {
+    @include mixins.no-highlight;
+
+    background: none;
+    margin: 0 10px;
+    border: none;
+    color: variables.$primary-color;
+    font-size: 50px;
+    height: 100%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

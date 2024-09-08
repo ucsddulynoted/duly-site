@@ -1,0 +1,20 @@
+@use "utils/variables";
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: variables.$background-color;
+    color: variables.$primary-color;
+    font-family: Poppins;
+}
+
+p {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 12px 0px;
+}
