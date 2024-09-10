@@ -4,3 +4,7 @@ title: Duly Noted
 
 disableKinds:
  - taxonomy
+
+module:
+  imports:
+    - path: github.com/google/docsy
