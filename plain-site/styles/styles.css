@@ -7,13 +7,14 @@ html {
     transform: translate(calc(50vw - 50%));
     background: linear-gradient(
         to right,
-        rgba(255,255,255,0),
+        #ffffff00,
         rgba(255,255,255,0.25) 25% 75%,
         rgba(255,255,255,0));
     border-radius: 30px;
     padding: 15px;
     text-align: center;
-    margin-top: 50px; 
+    margin-top: 25px;
+    z-index: 100000000;
 }
 .topnav a{
     border: 1px solid white;
@@ -28,7 +29,7 @@ html {
     transition-property: background-color, color;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
-    font-size: medium;
+    font-size: 80%;
     text-align: center;
     
 }
@@ -46,11 +47,50 @@ html {
 }
 
 body {
-    width: 90%;
-    margin: 0 auto;
     background-color:black;
     color:white;
     font-family: Poppins;
+}
+
+.main-body {
+    width: 70%;
+    margin: auto;
+}
+
+#image-container {
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
+
+#landing-image {
+    width: 100%;
+    border-radius: 2%;
+}
+
+#centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#logo {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#est {
+    font-size: 90%;
+    line-height: 0px;
+}
+
+#book-button {
+    font-size: 100%;
+    padding: 20px;
+    border-radius: 45px;
 }
 
 p {
@@ -64,6 +104,24 @@ p {
     margin: 12px 0px;
 }
 
+.center-image{
+    max-width: 70%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.center-image-container{
+    display: grid;
+}
+
+.copyright {
+    color: black;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 17%;
+    text-align: center;
+}
+
 .group-name {
     display: block;
     font-family: Caveat;
@@ -75,6 +133,20 @@ p {
 .intro-text {
     font-size: 36px;
     line-height: 54px;
+}
+
+.footer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.logo-left{
+    width: 10%;
+    padding-left: 4%;
+    margin-right: 10%;
 }
 
 .music-container {
@@ -195,4 +267,134 @@ p {
     transition-property: background-color, color;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
+}
+
+.followup {
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+    padding-top: 25px;
+}
+.row {
+    display: flex;
+}
+
+.column {
+flex: 50%;
+}
+.email {
+    color:white;
+}
+
+.socials {
+    text-align: right;
+    padding-right: 4%;
+}
+
+.social {
+    width : 10%;
+}
+
+.collapsible {
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid white;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.active, .collapsible:hover {
+    background-color: white;
+    color : black;
+}
+
+.content {
+    padding: 0 18px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    color : black;
+    margin-bottom: 10px;
+    display: none;
+    gap: 10px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    float: right;
+    margin-left: 5px;
+    font-size : 15px;
+    color : white;
+}
+
+.collapsible:hover {
+    color : black;
+}
+
+.active:after {
+    content: "\2212";
+    color : black;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.collapsible.clicked {
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 0px;
+}
+
+.table-image {
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.table-element {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.support-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+@media (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .table-image {
+        width : 14vw;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .table-image {
+        width : 20vw;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 899px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .table-image {
+        width : 30vw;
+    }
+}
+
+@media (max-width: 499px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .table-image {
+        width : 30vw;
+    }
 }
