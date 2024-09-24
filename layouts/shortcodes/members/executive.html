@@ -1,0 +1,10 @@
+<div class="member-dropdown">
+  <button type="button" class="collapsible">Executive Board '24-'25</button>
+  <div class="content">
+    <div class="members-grid">
+      {{ range .Site.Data.members.executive }}
+        {{ partial "members/current.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</div>

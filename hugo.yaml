@@ -8,3 +8,11 @@ disableKinds:
 module:
   imports:
     - path: github.com/google/docsy
+
+params:
+  calendly: https://calendly.com/ucsddulynoted/duly-noted-fall-24-auditions 
+  youtube: "https://youtube.com/@ucsddulynoted"
+  instagram: https://www.instagram.com/ucsddulynoted/
+  email: mailto:dulynoteducsd@gmail.com
+  facebook: https://www.facebook.com/ucsddulynoted/
+  tiktok: https://www.tiktok.com/@ucsddulynoted

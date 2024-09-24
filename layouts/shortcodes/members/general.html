@@ -1,0 +1,13 @@
+<div class="member-dropdown">
+  <button type="button" class="collapsible">General Members '24-'25</button>
+  <div class="content">
+    {{ range .Site.Data.members.general }}
+      <h3>{{ .year }}</h3>
+      <div class="members-grid">
+        {{ range .students }}
+          {{ partial "members/current.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>

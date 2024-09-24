@@ -1,0 +1,18 @@
+<div class="member-container">
+  <img src="{{ .path }}">
+  <div class="member-name">{{ .name }}</div>
+  <div>
+    {{ if .position }}
+      {{ .position }} |
+    {{ end }}
+    {{ .part }}
+  </div>
+  <div>
+    {{ .major }}
+  </div>
+  {{ if .minor }}
+    <div>
+      {{ .minor }}
+    </div>
+  {{ end }}
+</div>
