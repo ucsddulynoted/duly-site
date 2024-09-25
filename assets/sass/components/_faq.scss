@@ -1,0 +1,31 @@
+.faq {
+    width: 90%;
+    margin: auto;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 30px;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 801px) and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1201px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.faq-question {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.faq-answer {
+    font-size: 20px;
+    line-height: 36px;
+}

@@ -1,0 +1,25 @@
+.audition-date {
+    font-size: 20px;
+}
+
+.audition-contaier {
+    text-align: center;
+}
+
+.audition-list {
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    line-height: 36px;
+
+    li {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+}
+
