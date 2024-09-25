@@ -1,6 +1,7 @@
 @use "utils/colors";
 @use "utils/mixins";
 @use "components/carousel";
+@use "components/members";
 @use "components/redirect";
 
 .group-name {
@@ -48,4 +49,58 @@
         margin: 15px 0px 10px 10px;
         font-size: 20px;
     }
+}
+
+#landing-page {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+#landing-image {
+    width: 100%;
+}
+
+#centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: top 0.8s ease;
+}
+@media (max-width: 950px) {
+    #centered {
+        top: 45%; /* Reduce the margin as the screen shrinks */
+    }
+}
+@media (max-width: 600px) {
+    #centered {
+        top: 55%; /* Reduce the margin as the screen shrinks */
+    }
+}
+
+#logo {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: width 1s ease;
+}
+
+@media (max-width: 1780px) {
+    #logo {
+        width: 50%/* Reduce the margin as the screen shrinks */
+    }
+}
+
+#est {
+    font-size: 90%;
+    line-height: 0px;
+}
+
+#book-button {
+    font-size: clamp(14px, 1vw, 24px);
+    padding: 20px;
+    border-radius: 45px;
 }

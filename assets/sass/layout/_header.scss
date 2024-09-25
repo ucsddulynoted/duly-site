@@ -4,42 +4,40 @@
 
 .topnav {
     position: fixed;
+    display: flex;
+    justify-content: center;
     top: 0; left: 0;
     transform: translate(calc(50vw - 50%));
     background: linear-gradient(
         to right,
-        rgba(255,255,255,0),
+        #ffffff00,
         rgba(255,255,255,0.25) 25% 75%,
         rgba(255,255,255,0));
     border-radius: 30px;
-    padding: 15px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
+    z-index: 100000000;
 
-    a{
+    a {
         @include mixins.transition;
-
+        font-size: 80%;
         border: 1px solid colors.$primary-color;
-        width: 144px;
-        height: 63px; 
         padding-top: 30px;
         border-radius: 30px;
         padding: 15px;
-        margin-right: 40px;
+        margin: 0 20px;
         text-decoration: none;
         color: colors.$primary-color;
-        transition-property: background-color, color, border-color;
-        font-size: medium;
+        transition-property: background-color, color;
         text-align: center;
 
         &:hover {
             background-color: colors.$secondary-color;
-            border-color: colors.$secondary-color;
         }
     }
 }
 
-#page-button {
+.page-button {
     background-color: colors.$secondary-color;
     border-color: colors.$secondary-color;
     color: colors.$primary-color;

@@ -1,0 +1,110 @@
+@use "utils/colors";
+
+.collapsible {
+    background-color: colors.$background-color;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid colors.$primary-color;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    color: colors.$primary-color;
+    margin-bottom: 10px;
+
+    &:hover {
+        background-color: colors.$primary-color;
+        color: colors.$background-color;
+    }
+}
+
+.active {
+    background-color: colors.$primary-color;
+    color: colors.$background-color;
+}
+
+.content {
+    padding: 0 18px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    color : black;
+    margin-bottom: 10px;
+    display: none;
+    gap: 10px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    float: right;
+    margin-left: 5px;
+    font-size : 15px;
+    color : white;
+}
+
+.collapsible:hover {
+    color : black;
+}
+
+.active:after {
+    content: "\2212";
+    color : black;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.collapsible.clicked {
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 0px;
+}
+
+.members-grid {
+    display: grid;
+
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 500px) and (max-width: 899px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 499px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.member-container {
+    text-align: center;
+    font-size: 0.75em;
+    margin-bottom: 5px;
+
+    img {
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        border-radius: 10px;
+
+        @media (min-width: 1200px) {
+            width : 14vw;
+        }
+
+        @media (min-width: 900px) and (max-width: 1199px) {
+            width : 20vw;
+        }
+
+        @media (min-width: 500px) and (max-width: 899px) {
+            width : 30vw;
+        }
+
+        @media (max-width: 499px) {
+            width : 60vw;
+        }
+    }
+
+    .member-name {
+       font-weight: bold; 
+    }
+}
