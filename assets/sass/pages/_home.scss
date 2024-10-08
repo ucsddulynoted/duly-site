@@ -5,6 +5,7 @@
 @use "components/redirect";
 @use "components/audition";
 @use "components/faq";
+@use "components/landing-image";
 
 .group-name {
     display: block;
@@ -53,56 +54,18 @@
     }
 }
 
-#landing-page {
-    position: relative;
-    width: 100%;
+.intro-text {
+    font-size: min(3.2vw, 36px);
+    line-height: min(4.8vw, 54px);
+}
+
+.support-image-container {
     margin: auto;
-}
-
-#landing-image {
-    width: 100%;
-}
-
-#centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    transition: top 0.8s ease;
-}
-@media (max-width: 950px) {
-    #centered {
-        top: 45%; /* Reduce the margin as the screen shrinks */
-    }
-}
-@media (max-width: 600px) {
-    #centered {
-        top: 55%; /* Reduce the margin as the screen shrinks */
-    }
-}
-
-#logo {
+    justify-content: center;
     width: 70%;
-    height: auto;
-    display: block;
+}
+
+.support-image {
+    width: 100%;
     margin: auto;
-    transition: width 1s ease;
-}
-
-@media (max-width: 1780px) {
-    #logo {
-        width: 50%/* Reduce the margin as the screen shrinks */
-    }
-}
-
-#est {
-    font-size: 90%;
-    line-height: 0px;
-}
-
-#book-button {
-    font-size: clamp(14px, 1vw, 24px);
-    padding: 20px;
-    border-radius: 45px;
 }

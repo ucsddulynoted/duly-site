@@ -1,11 +1,15 @@
 @use "utils/colors";
 
 body {
-    width: 90%;
     margin: 0 auto;
     background-color: colors.$background-color;
     color: colors.$primary-color;
     font-family: Poppins;
+}
+
+main {
+    width: 70%;
+    margin: auto;
 }
 
 p {
