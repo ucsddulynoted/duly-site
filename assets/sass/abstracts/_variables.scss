@@ -1,0 +1,15 @@
+@use "functions" as *;
+
+$font-name: (
+    "primary": "Poppins",
+    "secondary": "Caveat",
+);
+
+$colors: (
+    "primary": #FFFFFF,
+    "secondary": #FFCA31,
+    "background": (
+        "primary": #000000,
+        "music-carousel": #5252525c,
+    )
+)

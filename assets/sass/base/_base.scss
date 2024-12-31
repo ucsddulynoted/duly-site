@@ -1,0 +1,12 @@
+@use 'abstracts' as *;
+
+body {
+    background-color: ss-var($colors, "background", "primary");
+    color: ss-var($colors, "primary");
+    font-family: ss-var($font-name, "primary");
+}
+
+main {
+    width: 70%;
+    margin: auto;
+}
